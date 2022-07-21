@@ -1,0 +1,85 @@
+@import "volume";
+@import "timeGame";
+@import "quantity";
+.settings {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: -100%;
+   background-color: $black;
+   transition: all 0.5s ease 0s;
+   overflow-y: auto;
+   z-index: 70;
+   &__content {
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $md3) {
+         row-gap: 20px;
+         padding: 40px 20px;
+      }
+
+      @media (max-width: $md4) {
+         padding: 30px 20px;
+      }
+   }
+   &__title {
+      color: $white;
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 30px;
+      @media (max-width: $md3) {
+         text-align: center;
+         margin-bottom: 10px;
+      }
+   }
+   &_open {
+      left: 0;
+   }
+   &__items {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      @media (max-width: $md3) {
+         row-gap: 30px;
+      }
+      @media (max-width: $md4) {
+         row-gap: 20px;
+      }
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      @media (max-width: $md3) {
+         align-items: center;
+      }
+   }
+   &__buttons {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: 20px;
+      @media (max-width: $md3) {
+         align-items: center;
+         flex-direction: column;
+         row-gap: 20px;
+      }
+   }
+   &__button {
+      width: 280px;
+      height: 60px;
+      @media (max-width: $md2) {
+         width: 220px;
+         height: 50px;
+      }
+   }
+}
+.setting {
+   &__title {
+      font-size: 18px;
+      line-height: 24px;
+      color: $white;
+   }
+}

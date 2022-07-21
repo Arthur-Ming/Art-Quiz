@@ -1,0 +1,53 @@
+.main {
+   position: relative;
+   left: 0;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   opacity: 1;
+   transition: all 0.5s ease 0s;
+
+   &__content {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 60px;
+   }
+
+   &__logo {
+      width: calc(240px + 282 * ((100vw - 768px) / (1400 - 768)));
+      height: calc(90px + 110 * ((100vw - 768px) / (1400 - 768)));
+      background: url("../assets/img/main/logo.svg") 0 0 / cover no-repeat;
+      @media (max-width: $md3) {
+         width: 200px;
+         height: 75px;
+      }
+   }
+
+   &__buttons {
+   }
+}
+
+.start-buttons {
+   color: $white;
+   display: flex;
+   column-gap: calc(50px + 200 * ((100vw - 768px) / (1200 - 768)));
+   @media (max-width: $md3) {
+      flex-direction: column;
+      row-gap: 20px;
+   }
+   &__button {
+      width: 280px;
+      height: 60px;
+      background: transparent;
+   }
+   &__artist {
+   }
+
+   &__picture {
+   }
+}

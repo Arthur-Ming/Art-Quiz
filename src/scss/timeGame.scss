@@ -1,0 +1,79 @@
+.time-game {
+   display: inline-block;
+}
+
+.time-game-toggler {
+   display: block;
+}
+
+.time-game-toggler__input {
+   display: block;
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   opacity: 0;
+   pointer-events: none;
+   outline: none;
+}
+
+.time-game-toggler__state {
+   display: inline-flex;
+   justify-content: flex-start;
+   align-items: center;
+   cursor: pointer;
+}
+
+.time-game-toggler__control {
+   position: relative;
+   width: 46px;
+   height: 20px;
+   box-sizing: border-box;
+   border: 1px solid $white;
+   border-radius: 100px;
+   background: $white;
+   transition: all 0.3s ease 0s;
+}
+
+.time-game-toggler__round {
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   left: 1px;
+   top: 1px;
+   right: 25px;
+   opacity: 0.8;
+   background: $pink;
+   border-radius: 50%;
+   transition: all 0.3s ease 0s;
+}
+
+.time-game-toggler__input:focus ~ .time-game-toggler__state .time-game-toggler__legend {
+   text-decoration: underline;
+}
+
+.time-game-toggler__input:disabled ~ .time-game-toggler__state {
+   cursor: not-allowed;
+}
+
+.time-game-toggler__input:disabled ~ .time-game-toggler__state .time-game-toggler__control .time-game-toggler__round {
+   background: #0a3963;
+   opacity: 1;
+}
+
+.time-game-toggler__input:checked ~ .time-game-toggler__state .time-game-toggler__control {
+   background-color: $pink;
+   border-color: $pink;
+   transition: all 0.5s ease 0s;
+}
+
+.time-game-toggler__input:checked ~ .time-game-toggler__state .time-game-toggler__control .time-game-toggler__round {
+   left: unset;
+   right: 1px;
+   left: 25px;
+   background: #ffffff;
+}
+
+.time-game-toggler__input:disabled ~ .time-game-toggler__state .time-game-toggler__control {
+   background: $pink;
+   border-color: $pink;
+}

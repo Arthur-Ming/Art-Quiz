@@ -1,0 +1,28 @@
+body {
+   background: $black;
+   color: $white;
+   font-family: "Arial", sans-serif;
+   background-blend-mode: multiply;
+   opacity: 1;
+   transition: all 0.3s ease 0s;
+}
+
+#app {
+   width: 100%;
+   min-height: 100%;
+}
+.wrapper {
+   position: relative;
+   width: 100%;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+
+   &__box {
+      max-width: $maxWidthContainer + px;
+      margin: 0 auto;
+   }
+}
+main {
+   flex: 1 1 auto;
+}

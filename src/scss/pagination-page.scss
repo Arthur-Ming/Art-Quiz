@@ -1,0 +1,47 @@
+.page-pagination {
+   &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 40px;
+   }
+
+   &__pages {
+      font-size: 20px;
+      line-height: 24px;
+      display: flex;
+      column-gap: 10px;
+   }
+
+   &__current-page {
+      color: $pink;
+   }
+
+   &__total-page {
+   }
+   &__prev {
+   }
+   &__next {
+      transform: rotate(180deg);
+   }
+   &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 30px;
+      background: transparent;
+      svg {
+         width: 11px;
+         height: 20px;
+         display: block;
+         color: $white;
+         transition: color 0.5s ease 0s;
+      }
+      &:hover {
+         svg {
+            color: $pink;
+         }
+      }
+   }
+}

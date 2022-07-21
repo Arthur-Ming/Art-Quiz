@@ -1,0 +1,37 @@
+.timer {
+   position: fixed;
+   top: 0;
+   left: 0%;
+   //background-color: $green;
+   background: linear-gradient(to right, $red 0%, $red 0%, $green 0%, $green 100%);
+   width: 200px;
+   height: 50px;
+   border-radius: 0 0 30px 30px;
+   // transition: all 0.3s ease 0s;
+   transition: background 450ms ease-in;
+   z-index: 200;
+   @media (max-width: $md3) {
+      /*  left: 100%;
+      transform: translateX(-100%); */
+      width: 150px;
+      height: 30px;
+   }
+   &_over {
+      background-color: $red;
+   }
+   &__content {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__time {
+      span {
+         font-size: 20px;
+         line-height: 28px;
+         font-weight: 600;
+         color: $black;
+      }
+   }
+}
